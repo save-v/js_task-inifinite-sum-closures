@@ -14,6 +14,10 @@ function makeInfinityAdder() {
 
       return finalSum;
     }
+
+    if (typeof num !== 'number' || isNaN(num)) {
+      throw new Error('Only numeric values are allowed');
+    }
     sum += num;
 
     return adder;
